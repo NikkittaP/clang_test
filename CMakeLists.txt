@@ -33,11 +33,10 @@ set(CMAKE_AUTOMOC ON)
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-set(CMAKE_CXX_STANDARD 14)
-
 if (MSVC)
 	message(STATUS "Windows build")
+	set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+	set(CMAKE_CXX_STANDARD 14)
 	add_compile_options(/W0)
 	set(CMAKE_C_FLAGS "/EHsc -m64")
 	set(CMAKE_CXX_FLAGS "/EHsc -m64")
